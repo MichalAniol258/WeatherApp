@@ -21,7 +21,7 @@ To run the application locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/repo-name.git
+   git clone https://github.com/MichalAniol258/WeatherApp.git
    cd repo-name
    ```
 

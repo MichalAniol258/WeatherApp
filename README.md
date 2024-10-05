@@ -22,7 +22,7 @@ To run the application locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/MichalAniol258/WeatherApp.git
-   cd repo-name
+   cd WeatherApp
    ```
 
 2. Install dependencies:

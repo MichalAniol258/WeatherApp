@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  touch-action: pan-x pan-y;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #171717;
+  --backgroundDiv: #1e1e1e;
+}
+
+body {
+  background: var(--background);
+  color: white;
+  font-family: Nunito Sans;
+}
+
+
+
+
+/* HEADER */
+
+.Container {
+  max-height: max-content;
+  margin: 4rem auto;
+  background: var(--background);
+  width: 100%;
+  padding: 2rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.searchIcon {
+  width: 1rem;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+
+
+.sHeader header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sHeader header form {
+  position: relative;
+}
+
+.error-message {
+  color: #e76f51;
+  text-align: center;
+}
+
+.weather-searchinput {
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  padding: 0.5rem 2.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--backgroundDiv);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  opacity: 0.2;
+}
+
+
+/* CARD CURRENT TEMP */
+
+
+.sCardCurrentTemp {
+  width: calc(100%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  margin-top: 3rem;
+  background-color: var(--backgroundDiv);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.2;
+  background-color: white;
+}
+
+
+.cardBody p {
+  font-size: 1.2rem;
+}
+
+
+.cardBody span {
+  font-size: 1rem;
+}
+
+.cardImage {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.cardImage h2 {
+  font-size: 3.5rem;
+}
+
+.weather-icon {
+  width: 7rem;
+  height: auto;
+}
+
+.cardIcon {
+  width: 0.75rem;
+  height: auto;
+}
+
+
+.iconsCard {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.iconsCard p {
+  font-size: 1rem;
+  opacity: 1;
+}
+
+
+/* CARD HOURLY TEMP */
+
+.sCardHourlyTemp {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: center;
+}
+
+
+.textToday {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.sCardHourlyTemp p {
+  font-size: 1.2rem;
+}
+
+
+.cardHourlyBody p {
+  font-size: 1rem;
+}
+
+
+.hourlyHumidity {
+  display: flex;
+  align-items: center;
+}
+
+.locationIcon {
+  width: 0.8rem;
+  height: auto;
+}
+
+.location-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+
+
+
+.hourlyCard {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hourlyCard span {
+  font-size: 2rem;
+}
+
+.hourlyImg img {
+  width: max-content;
+  height: auto;
+}
+
+
+.hourlyHumidity img {
+  margin-right: 0.25rem;
+  width: 1rem;
+  height: auto;
+}
+
+.cardHourlyBody {
+  flex: 0 0 calc(33.33% - 0.55rem);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 15%);
+  padding: 1rem;
+  margin: 0.25rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--backgroundDiv);
+  scroll-snap-align: center;
+}
+
+@media (max-width: 480px) {
+  .cardHourlyBody {
+    padding: 0.6rem;
+  }
+
+  .cardHourlyBody p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .cardHourlyBody {
+    padding: 1rem;
+  }
+
+  .cardHourlyBody p {
+    font-size: 1rem;
+  }
+
+  .hourlyImg img {
+    width: max-content;
+    max-width: 7.5rem;
+    height: auto;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .cardHourlyBody {
+    flex: 0;
+    width: 8rem;
+  }
+
+}
